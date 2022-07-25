@@ -1,2 +1,4 @@
-# Baekjoon 문제풀이 업로드 폴더입니다.
-<p>백준허브를 기반으로 커밋</p>
+### 문제 설명
+
+<p>백준허브를 기반으로 커밋 수행</p>
+<https://github.com/BaekjoonHub/BaekjoonHub</p>
