@@ -11,35 +11,22 @@ public class Main {
         int M = Integer.valueOf(st.nextToken());
         
         int[][] arr1 = new int[N][M];
-        int[][] arr2 = new int[N][M];
-        int[][] ans = new int[N][M];
-      
 
         for (int i = 0; i < N; i++) {
-         StringTokenizer st2 = new StringTokenizer(br.readLine());
+          st = new StringTokenizer(br.readLine());
           for (int j = 0; j < M; j++) {
-            arr1[i][j] = Integer.parseInt(st2.nextToken());
+            arr1[i][j] = Integer.parseInt(st.nextToken());
           } 
         }
-
-       for (int i = 0; i < N; i++) {
-         StringTokenizer st3 = new StringTokenizer(br.readLine());
-          for (int j = 0; j < M; j++) {
-            arr2[i][j] = Integer.parseInt(st3.nextToken());
-          } 
+        
+        for (int i = 0;  i < N; i++) {
+            st = new StringTokenizer(br.readLine());
+            for (int j = 0; j < M; j++) {
+                int b = arr1[i][j] + Integer.parseInt(st.nextToken());
+                sb.append(b).append(" ");
+            }
+            sb.append("\n");
         }
-
-        for (int i = 0; i < N; i++) {
-          for (int j = 0; j < M; j++) {
-            ans[i][j] = arr1[i][j] + arr2[i][j];
-          }
-        }
-
-        for (int i = 0; i < N; i++) {
-          for (int j = 0; j < M; j++) {
-            System.out.print(String.valueOf(ans[i][j]) + " ");
-          }
-          System.out.println();   
-    }
- }
+      System.out.println(sb);
+  }
 }
