@@ -1,3 +1,5 @@
+# ※ 약수의 개수가 홀수개인 모든 수는 제곱수이다. ※
+
 def numOfDivisor (num) :
     count = 0
     for i in range(1, num+1) :
