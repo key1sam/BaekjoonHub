@@ -16,10 +16,3 @@ def solution(numbers, target):
             if result == target :
                 answer += 1
     return answer
-            
-    
-        
-    
-    
-    
-    return answer
