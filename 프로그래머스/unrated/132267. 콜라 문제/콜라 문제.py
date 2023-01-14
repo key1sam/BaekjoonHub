@@ -1,20 +1,16 @@
 import sys
 sys.setrecursionlimit(10**9)
 
-
-
 def solution(a, b, n):
     global answer
     global quotient
     global remain
-    
     answer = 0
     quotient = 0
     remain = 0
     calc(n, a, b)
     
     return answer
-
 
 def calc(num, a, b) :
     global answer
