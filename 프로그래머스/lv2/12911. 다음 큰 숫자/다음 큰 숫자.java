@@ -2,13 +2,13 @@
 // n을 2진수로 변환한 후, 1의 개수를 체크. n을 1씩 증가시키면서 1의 개수가 동일할 경우 return!
 // 해당 문제에서 배운 점
 // 10진수를 2진수 문자열로 바꾸는법 : Integer.toBinaryString(num); 
+// 10진수를 2진수로 변경한 후, 1의 개수를 세는법 : Integer.bitCount(num);
 
 
 import java.util.*;
 
 class Solution {
     
-    static int count = 0;
     static int now = 0;
     
     public int solution(int n) {
