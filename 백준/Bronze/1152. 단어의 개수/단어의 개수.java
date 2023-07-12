@@ -3,9 +3,10 @@ import java.io.*;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
-        String str = br.readLine();
-        StringTokenizer st = new StringTokenizer(str, " ");
-		System.out.println(st.countTokens());	
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringTokenizer st = new StringTokenizer(br.readLine());
+        int wordCount = st.countTokens();
+
+        System.out.print(wordCount);
     }
 }
