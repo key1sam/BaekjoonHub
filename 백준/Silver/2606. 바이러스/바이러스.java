@@ -1,4 +1,4 @@
-import java.lang.reflect.Array;
+import java.sql.Array;
 import java.util.*;
 import java.io.*;
 
@@ -6,6 +6,7 @@ public class Main {
 
     public static boolean[] visited;
     public static ArrayList<ArrayList<Integer>> graph;
+    public static ArrayDeque<ArrayList<Integer>> deque;
 
     public static int answer = 0;
 
@@ -16,6 +17,7 @@ public class Main {
         int edge = Integer.parseInt(br.readLine());
         visited = new boolean[num+1];
         graph = new ArrayList<>();
+        deque = new ArrayDeque<>();
 
         for (int i = 0; i < num+1; i++) { // 노드 생성
             graph.add(new ArrayList<>());
@@ -29,18 +31,22 @@ public class Main {
             graph.get(connectNode).add(node);
         }
 
-        dfs(1);
+        bfs(1);
         System.out.print(answer);
 
     }
 
-    public static void dfs(int start) {
+    public static void bfs(int start) {
         visited[start] = true;
-        ArrayList<Integer> nowNode = graph.get(start);
-        for (int i = 0; i < nowNode.size(); i++) {
-            if (visited[nowNode.get(i)] == false) { // 아직 방문하지 않았다면 방문하기
-                answer++;
-                dfs(nowNode.get(i));
+        deque.add(graph.get(start));
+        while (deque.size() > 0) {
+            ArrayList<Integer> nowNode = deque.poll();
+            for (int i = 0; i < nowNode.size(); i++) {
+                if (visited[nowNode.get(i)] == false) {
+                    deque.add(graph.get(nowNode.get(i)));
+                    visited[nowNode.get(i)] = true;
+                    answer ++;
+                }
             }
         }
     }
