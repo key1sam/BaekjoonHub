@@ -1,3 +1,6 @@
+// class를 생성해서 하는 방법을 연습했습니다.
+// Lv2는 한번 더 풀어봐야합니다.
+
 import java.util.*;
 
 class Solution {
@@ -31,7 +34,7 @@ class Solution {
             }
         }
 
-        return -1; // 에러 상황 처리 등에 따라 다른 값으로 변경 가능
+        return -999; // 에러 상황 처리 등에 따라 다른 값으로 변경 가능
     }
 
     public class Value {
